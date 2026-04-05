@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Janani Medicals</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Noto+Sans+Tamil&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Poppins;background:#eef3f8}
+.tamil{font-family:'Noto Sans Tamil', sans-serif}
+
+header{position:fixed;top:0;width:100%;background:#111;color:#fff;display:flex;justify-content:space-between;align-items:center;padding:15px 20px;z-index:1000}
+nav{display:flex}
+nav a{color:#fff;margin:0 8px;text-decoration:none;font-size:14px}
+.menu-toggle{display:none;font-size:22px;cursor:pointer}
+.lang-btn{background:#00f5d4;border:none;padding:5px 10px;border-radius:8px;cursor:pointer;margin-left:10px}
+
+section{padding:90px 20px}
+
+.hero{height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('https://images.unsplash.com/photo-1584308666744-24d5c474f2ae') center/cover}
+
+.moving-text{font-size:28px}
+.moving-text span{display:inline-block;animation:move 8s linear infinite}
+@keyframes move{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:15px}
+.card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,.1)}
+.card img{width:100%;height:150px;object-fit:contain;background:#fff;padding:10px;display:block;margin:auto}
+.info{padding:10px}
+.info h3{font-size:15px}
+.info p{font-size:12px}
+
+.btns{display:flex;gap:5px;margin-top:8px}
+.btn{flex:1;padding:6px;font-size:12px;border:none;border-radius:8px;cursor:pointer}
+.buy{background:#00f5d4}
+.cart{background:#ffb703}
+
+.about{text-align:center;max-width:90%;margin:auto}
+footer{background:#111;color:#fff;text-align:center;padding:15px;font-size:13px}
+
+@media(max-width:768px){
+ nav{display:none;flex-direction:column;background:#111;position:absolute;top:60px;right:0;width:200px;padding:10px}
+ nav.show{display:flex}
+ .menu-toggle{display:block}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h2 id="title">Janani Medicals</h2>
+<div>
+<button class="lang-btn" onclick="toggleLang()">தமிழ்</button>
+<span class="menu-toggle" onclick="toggleMenu()">☰</span>
+</div>
+<nav id="nav">
+<a href="#home" id="nav-home">Home</a>
+<a href="#products" id="nav-products">Products</a>
+<a href="#about" id="nav-about">About</a>
+</nav>
+</header>
+
+<section id="home" class="hero">
+<div>
+<div class="moving-text"><span id="hero-title">Janani Medicals - Trusted Pharmacy</span></div>
+<p id="hero-text">Buy genuine medicines online</p>
+</div>
+</section>
+
+<section id="products">
+<h2 id="prod-title" style="text-align:center;margin-bottom:20px">Medicines</h2>
+<div class="products">
+
+<div class="card"><img src="https://images.unsplash.com/photo-1580281780460-82d277f4e3fc"><div class="info"><h3>Dolo 650</h3><p>Fever & body pain</p><div class="btns"><button class="btn buy">Buy</button><button class="btn cart">Cart</button></div></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae"><div class="info"><h3>Glycomet-500</h3><p>Diabetes control</p><div class="btns"><button class="btn buy">Buy</button><button class="btn cart">Cart</button></div></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1628771065518-0d82f1938462"><div class="info"><h3>Telma 40</h3><p>Blood pressure</p><div class="btns"><button class="btn buy">Buy</button><button class="btn cart">Cart</button></div></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2"><div class="info"><h3>Zerodol SP</h3><p>Joint pain relief</p><div class="btns"><button class="btn buy">Buy</button><button class="btn cart">Cart</button></div></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1612532275214-e4ca76d0e4d1"><div class="info"><h3>Montek LC</h3><p>Allergy & cold</p><div class="btns"><button class="btn buy">Buy</button><button class="btn cart">Cart</button></div></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2"><div class="info"><h3>Shelcal 500</h3><p>Calcium & bone health</p><div class="btns"><button class="btn buy">Buy</button><button class="btn cart">Cart</button></div></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae"><div class="info"><h3>Pan-D</h3><p>Acidity & stomach care</p><div class="btns"><button class="btn buy">Buy</button><button class="btn cart">Cart</button></div></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1612532275214-e4ca76d0e4d1"><div class="info"><h3>Zincovit</h3><p>Immunity booster</p><div class="btns"><button class="btn buy">Buy</button><button class="btn cart">Cart</button></div></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1628771065518-0d82f1938462"><div class="info"><h3>Albendazole</h3><p>Deworming tablet</p><div class="btns"><button class="btn buy">Buy</button><button class="btn cart">Cart</button></div></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1580281780460-82d277f4e3fc"><div class="info"><h3>Atorva</h3><p>Cholesterol control</p><div class="btns"><button class="btn buy">Buy</button><button class="btn cart">Cart</button></div></div></div>
+
+</div>
+</section>
+
+<section id="about">
+<div class="about">
+<h2 id="about-title">About</h2>
+<p id="about-text">Professional pharmacy providing genuine medicines</p>
+<p>📞 9994147818</p>
+<p>📧 jananimedicals01@gmail.com</p>
+</div>
+</section>
+
+<footer>
+<p id="footer">© 2026 Janani Medicals</p>
+</footer>
+
+<script>
+function toggleMenu(){document.getElementById('nav').classList.toggle('show')}
+
+let tamil=false;
+function toggleLang(){
+ tamil=!tamil;
+ if(tamil){
+  document.body.classList.add('tamil');
+  document.getElementById('title').innerText='ஜனனி மெடிக்கல்ஸ்';
+  document.getElementById('nav-home').innerText='முகப்பு';
+  document.getElementById('nav-products').innerText='மருந்துகள்';
+  document.getElementById('nav-about').innerText='எங்களை பற்றி';
+  document.getElementById('hero-title').innerText='நம்பகமான மருந்தகம்';
+  document.getElementById('hero-text').innerText='மருந்துகளை ஆன்லைனில் வாங்குங்கள்';
+  document.getElementById('prod-title').innerText='மருந்துகள்';
+  document.getElementById('about-title').innerText='எங்களை பற்றி';
+  document.getElementById('about-text').innerText='உண்மையான மருந்துகளை வழங்கும் நம்பகமான மருந்தகம்';
+  document.getElementById('footer').innerText='© 2026 ஜனனி மெடிக்கல்ஸ்';
+ }else{
+  document.body.classList.remove('tamil');
+  document.getElementById('title').innerText='Janani Medicals';
+  document.getElementById('nav-home').innerText='Home';
+  document.getElementById('nav-products').innerText='Products';
+  document.getElementById('nav-about').innerText='About';
+  document.getElementById('hero-title').innerText='Janani Medicals - Trusted Pharmacy';
+  document.getElementById('hero-text').innerText='Buy genuine medicines online';
+  document.getElementById('prod-title').innerText='Medicines';
+  document.getElementById('about-title').innerText='About';
+  document.getElementById('about-text').innerText='Professional pharmacy providing genuine medicines';
+  document.getElementById('footer').innerText='© 2026 Janani Medicals';
+ }
+}
+</script>
+
+</body>
+</html>
